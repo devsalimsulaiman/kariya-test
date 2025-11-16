@@ -40,24 +40,36 @@ const features = [
 export default function SectionTwo() {
   return (
     <div className="pb-[150px] flex justify-center items-start">
-      <div className="w-[80%]  flex flex-col gap-[150px]">
-        <div className="space-y-[10px] w-[60%] mx-auto">
+      <div className="w-[80%]  flex flex-col gap-[150px] max-md:w-full ">
+        <div className="space-y-[10px] w-[60%] mx-auto md:max-lg:w-[100%] max-md:w-[90%]">
           <h1 className="font-[800] text-[48px] text-center">
             Explore Kariyapay’s Features
           </h1>
+          <div className="w-[106px] h-[2px] bg-primary-color mx-auto"></div>
 
-          <p className="font-[500] text-[28px] text-gray-400 text-center">
+          <p className="font-[500] text-[28px] text-gray-400 text-center max-md:text-[23.5px]">
             Scandapay is a fintech solution that allows users make payment for
             goods purchased by scanning a QR Code. Scandapay also offers other
             amazing features.
           </p>
         </div>
 
-        <div className="flex justify-between flex-wrap gap-[90px]">
+        <div
+          className="grid gap-8
+               /* mobile – 1 col */ 
+               grid-cols-1
+               /* iPad portrait – 2 col */ 
+               min-md:max-lg:grid-cols-2
+               /* desktop – 3 col */ 
+               lg:grid-cols-3
+               justify-center"
+        >
           {features.map((item, i) => (
             <div
               key={i}
-              className="max-w-[356px] bg-[#F6FFE733] p-[30px] shadow-xl min-h-[265px] flex flex-col items-center gap-[22px] text-center rounded-[13px]"
+              className="max-w-[356px] mx-auto bg-[#F6FFE733] p-[30px] 
+                 shadow-xl min-h-[265px] flex flex-col items-center 
+                 gap-[22px] text-center rounded-[13px]"
             >
               <img src={item.icon} alt="" />
 
