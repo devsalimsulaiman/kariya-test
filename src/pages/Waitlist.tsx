@@ -1,19 +1,19 @@
 
 import React from "react";
-import stars from "../assets/stars.png";
+import stars from "../assets/Stars.png";
 import whatsapp from "../assets/whatsapp.png";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { TiSocialFacebookCircular } from "react-icons/ti";
 import { PiLinkedinLogoBold } from "react-icons/pi";
 import Arrowback from "../components/Arrowback";
-import bg from "../assets/bg.jpg";
+// import bg from "../assets/bg.jpg";
 const Waitlist = () => {
   return (
     <div>
       <div
         className="min-h-screen flex flex-col justify-center items-center px-4 pt-20 pb-20"
         style={{
-          backgroundImage: `linear-gradient(to bottom, #f5fdf3cc, #eff3eecc), url(${bg})`,
+          // backgroundImage: `linear-gradient(to bottom, #f5fdf3cc, #eff3eecc), url(${bg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
