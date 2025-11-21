@@ -21,12 +21,17 @@ export default function MainFooter() {
             />
           </a>
 
-          <a href="/waitlist">
+          <a
+            href="https://forms.gle/HmNdxGsDuUCud1uN9
+"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               className="rounded-full md:max-lg:max-w-[119.93px] md:max-lg:text-[11.63px] max-md:w-full"
               variant={"login"}
               size={"authBtn"}
-              children="Join the waitlist"
+              children="Take a Survey"
             />
           </a>
         </div>
