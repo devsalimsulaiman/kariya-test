@@ -31,19 +31,23 @@ const Waitlist = () => {
           Stay informed about our latest updates
         </p>
 
-        <form className="w-full max-w-xs lg:max-w-md md:max-w-sm space-y-3">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="w-full px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#91C730] transition"
-          />
-          <input
-            type="tel"
-            placeholder="Enter your phone number"
-            className="w-full px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#91C730] transition"
-          />
+        <form className="w-full max-w-x lg:max-w-md md:max-w-sm space-y-3">
+          <div className="space-y-3">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-3 border rounded-md outline-none 
+      transition placeholder-[#475467] bg-white"
+            />
 
-          <div className="mt-5 space-y-3">
+            <input
+              type="tel"
+              placeholder="Enter your phone number"
+              className="w-full px-4 py-3 border rounded-md outline-none 
+      transition placeholder-[#475467] bg-white"
+            />
+          </div>
+          <div className="mt-10 space-y-3">
             <button
               type="submit"
               className="w-full bg-[#91C730] text-white font-semibold py-3 rounded-md hover:bg-green-600 transition">

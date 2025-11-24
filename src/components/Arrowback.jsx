@@ -27,7 +27,7 @@ const Arrowback = () => {
 
   return (
     <div
-      className={`fixed top-6 left-6 lg:left-16 md:left-16 transition-all duration-300 z-50
+      className={`fixed top-50 left-6 lg:left-16 md:left-16 transition-all duration-300 z-50
         ${
           visible
             ? "opacity-100 translate-y-0"
