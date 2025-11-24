@@ -31,7 +31,7 @@ const Waitlist = () => {
           Stay informed about our latest updates
         </p>
 
-        <form className="w-full max-w-x lg:max-w-md md:max-w-sm space-y-3">
+        <form className="w-full max-w-x lg:max-w-md md:max-w-sm">
           <div className="space-y-3">
             <input
               type="email"
@@ -62,7 +62,7 @@ const Waitlist = () => {
           </div>
         </form>
 
-        <div className="flex justify-center space-x-10 mt-12">
+        <div className="flex justify-center space-x-10 ">
           <FaXTwitter
             size={22}
             className="cursor-pointer hover:text-[#91C730]"
