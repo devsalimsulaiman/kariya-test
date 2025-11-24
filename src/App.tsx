@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
 import LandingPage from "./pages/landing-page";
 import WaitlistLayout from "./components/layout/WaitlistLayout";
-import Waitlist from "./pages/Waitlist";
 import HowItWorks from "./pages/how-it-works";
 import Pricing from "./pages/pricing";
 import Faqs from "./pages/faqs";
 import Contact from "./pages/contact";
+import Waitlist from "./pages/Waitlist";
 
 function App() {
   return (

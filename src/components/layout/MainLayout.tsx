@@ -6,7 +6,7 @@ export default function MainLayout() {
   return (
     <>
       <MainNavbar />
-      <main className="min-h-screen">
+      <main className="">
         <Outlet /> {/* This renders the nested routes */}
       </main>
       <MainFooter />

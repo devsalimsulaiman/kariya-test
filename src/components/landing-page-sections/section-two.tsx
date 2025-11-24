@@ -1,56 +1,56 @@
 const features = [
   {
     icon: "/icons/send.svg",
-    title: "Send, and Receive Money",
+    title: "Secure Escrow Payments",
     description:
-      "Our platform offers different ways for you to send and receive money money conveniently without any hassle",
+      "Buy and sell with confidence. Money stays protected until delivery is confirmed.",
   },
   {
     icon: "/icons/pay.svg",
-    title: "Pay Bills",
+    title: " Instant Transfers",
     description:
-      "Pay bills easily and conveniently on our platform. Pay Internet, Cable TV, or Internet bills.",
+      "Send money to any Nigerian bank or KariyaPay wallet in seconds — fast, reliable, and always available.",
   },
   {
     icon: "/icons/ccard.svg",
-    title: "Virtual Cards",
+    title: "Payment Links for Easy Collections",
     description:
-      "Get both Naira, and Dollar virtual cards to make easy transactions online, we do not charge you on transactions.",
+      "Get paid by anyone, even if they don’t use KariyaPay. Just share your link and watch payments roll in.",
   },
   {
     icon: "/icons/qr.svg",
-    title: "Create QR Codes",
+    title: "Business Wallet & NUBAN Account",
     description:
-      "Create QR Codes to receive payments easily by assigning QR code to specific user.",
+      "Receive direct bank transfers through your personal NUBAN account powered by our payment partners.",
   },
   {
     icon: "/icons/reward.svg",
-    title: "Reward Other Users",
+    title: "Smart Transaction Tracking",
     description:
-      "You can also create QR Codes to reward users on the platform by assigning to specific users.",
+      "See every payment, escrow status, and wallet movement in one clean, organized timeline.",
   },
   {
     icon: "/icons/save.svg",
-    title: "Save, and Invest",
+    title: "Built for Online Vendors",
     description:
-      "You can save your money in Naira, or Dollar. You can also invest in stocks on our platfom.",
+      "From order confirmation to final payout, manage your sales smoothly with tools made for social media sellers.",
   },
 ];
 
 export default function SectionTwo() {
   return (
-    <div className="pb-[150px] flex justify-center items-start">
-      <div className="w-[80%]  flex flex-col gap-[150px] max-md:w-full ">
+    <div className="py-[150px]  flex justify-center items-start">
+      <div className="w-[80%]  flex flex-col gap-[150px] max-md:gap-[100px] max-md:w-full ">
         <div className="space-y-[10px] w-[60%] mx-auto md:max-lg:w-[100%] max-md:w-[90%]">
-          <h1 className="font-[800] text-[48px] text-center">
+          <h1 className="font-[800] text-[48px] text-center leading-none max-md:leading-none">
             Explore Kariyapay’s Features
           </h1>
           <div className="w-[106px] h-[2px] bg-primary-color mx-auto"></div>
 
           <p className="font-[500] text-[28px] text-gray-400 text-center max-md:text-[23.5px]">
-            Scandapay is a fintech solution that allows users make payment for
-            goods purchased by scanning a QR Code. Scandapay also offers other
-            amazing features.
+            KariyaPay is a smart payment wallet for easy transfers, secure
+            escrow payments, and safe online transactions, built for buyers,
+            sellers, and small businesses.
           </p>
         </div>
 

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
@@ -84,16 +82,28 @@ export default function MobileNav() {
             </div>
 
             <div className="mt-[50px] flex flex-col gap-[5px]">
-              <Button
-                variant="outline"
-                className="h-[55.67px] rounded-[14.33px] border-2 border-primary-color text-primary-color"
+              <a
+                href="https://forms.gle/HmNdxGsDuUCud1uN9"
+                target="_blank"
+                className="w-full"
               >
-                Login
-              </Button>
-
-              <Button className="h-[55.67px] rounded-[14.33px] bg-primary-color text-white">
-                Create Account
-              </Button>
+                <Button
+                  variant="outline"
+                  className="h-[55.67px] w-full rounded-[14.33px] border-2 border-primary-color text-primary-color"
+                >
+                  Login
+                </Button>
+              </a>
+              <a
+                href="https://forms.gle/HmNdxGsDuUCud1uN9"
+                target="_blank"
+                className="w-full"
+              >
+                {" "}
+                <Button className="h-[55.67px] w-full rounded-[14.33px] bg-primary-color text-white">
+                  Create Account
+                </Button>
+              </a>
             </div>
           </div>
         </div>

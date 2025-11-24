@@ -2,22 +2,22 @@ import { Button } from "../ui/button";
 
 export default function HeroSection() {
   return (
-    <div className="w-full px-[100px] py-[50px] min-h-screen max-md:px-[20px]">
-      <div className="flex justify-between gap-[10px]  md:max-lg:flex-col max-md:flex-col">
+    <div className="w-full px-[100px]    max-md:px-[20px]">
+      <div className="flex  h-auto md:max-lg:h-screen max-md:h-auto justify-between items-center gap-[10px]  md:max-lg:flex-col max-md:flex-col ">
         <div className="w-[50%]  flex flex-col gap-[35px] max-lg:w-full max-lg:items-center max-lg:text-center">
-          <h1 className="font-[800] text-[72.18px] text-[#000000] max-md:text-[60.66px] max-md:font-[600]">
+          <h1 className="font-[800] text-[72.18px] text-[#000000] max-md:text-[60.66px] max-md:font-[600]  leading-none max-md:leading-tight">
             Secure Payments{" "}
             <span className="text-primary-color"> Made Simple</span>
           </h1>
 
           <p className="font-[500] text-[26px] text-gray-400 max-md:text-[23.54px]">
-            KariyaPay acts as your trusted middleman, holding funds securely
-            until both buyer and vendore are satisfied. Complete transparency,
-            zero risk, maximum trust.
+            Send and receive money easily, pay vendors or customers, and use
+            escrow when extra protection is needed. Simple transfers when you
+            want speed, escrow when you need trust.
           </p>
 
           <div className="flex gap-[21px] items-center max-md:flex-col">
-            <a href="/waitlist">
+            <a href="https://forms.gle/HmNdxGsDuUCud1uN9" target="_blank">
               <Button
                 variant={"signupBtn"}
                 size={"authBtn"}
@@ -25,7 +25,7 @@ export default function HeroSection() {
                 className=" max-md:w-full"
               />
             </a>
-            <a href="/waitlist">
+            <a href="/waitlist" className="max-md:w-full">
               <Button
                 variant={"login"}
                 size={"authBtn"}
@@ -48,6 +48,9 @@ export default function HeroSection() {
       </div>
     </div>
   );
+}
+
+{
 }
 
 type StatProps = {
