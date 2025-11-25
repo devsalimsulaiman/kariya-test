@@ -1,11 +1,10 @@
-import React from "react";
 import stars from "../assets/Stars.png";
 import whatsapp from "../assets/whatsapp.png";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { TiSocialFacebookCircular } from "react-icons/ti";
 import { PiLinkedinLogoBold } from "react-icons/pi";
-import Arrowback from "../components/Arrowback";
 import bg from "../assets/kariyabg.jpg";
+import Arrowback from "@/components/Arrowback";
 const Waitlist = () => {
   return (
     <div>
@@ -16,7 +15,8 @@ const Waitlist = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-        }}>
+        }}
+      >
         <Arrowback />
         <div className="flex justify-center mb-2">
           <img src={stars} alt="stars" className="w-32 h-32 object-contain" />
@@ -52,14 +52,16 @@ const Waitlist = () => {
             <button
               type="submit"
               className="w-full bg-[#91C730] text-white font-semibold py-3 rounded-md 
-      hover:bg-green-600 transition">
+      hover:bg-green-600 transition"
+            >
               Join waitlist
             </button>
 
             <button
               type="button"
               className="w-full bg-[#3FABDD] text-white font-semibold py-3 rounded-md 
-      hover:bg-[#2599d4] transition">
+      hover:bg-[#2599d4] transition"
+            >
               Take a survey
             </button>
           </div>

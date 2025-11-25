@@ -6,13 +6,16 @@ export default function MainFooter() {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className="bg-[#111827] px-[50px] flex flex-col pb-[50px]">
+    <div className="bg-[#111827] px-[50px] max-md:px-[20px] flex flex-col pb-[50px]">
       <div className="flex justify-between items-center  border-white border-b border-b-[#E2E8F0] py-[50px] max-md:flex-col max-md:gap-[40px]">
-        <p className="font-[600] text-[60.96px] text-white md:max-lg:text-[19.89px] max-md:text-[40px]">
+        <p className="font-[600] max-md:text-center text-[60.96px] text-white md:max-lg:text-[19.89px] max-md:text-[40px]">
           Secure your transactions
         </p>
-        <div className="flex items-center gap-[25.4px] max-md:flex-col max-md:w-full">
-          <a href="/waitlist">
+        <div className="  flex items-center gap-[25.4px] max-md:flex-col max-md:w-full">
+          <a
+            href="https://forms.gle/HmNdxGsDuUCud1uN9"
+            className="max-md:w-full"
+          >
             <Button
               className="rounded-full md:max-lg:max-w-[119.93px] md:max-lg:text-[11.63px] max-md:w-full"
               variant={"signupBtn"}
@@ -22,8 +25,8 @@ export default function MainFooter() {
           </a>
 
           <a
-            href="https://forms.gle/HmNdxGsDuUCud1uN9
-"
+            href="https://forms.gle/HmNdxGsDuUCud1uN9"
+            className="max-md:w-full"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -59,7 +62,7 @@ export default function MainFooter() {
             </p>
           </div>
         </div>
-        <div className="flex items-start gap-[82.55px] max-md:flex-col max-md:items-center">
+        <div className="flex items-start max-md:gap-[30px] gap-[82.55px] max-md:flex-col max-md:items-center">
           <FooterItems
             headers="Product"
             firstItem="How It Works"
@@ -67,23 +70,24 @@ export default function MainFooter() {
             thirdItem="Security"
             fourthItem={"API Documentation"}
           />
-
-          <FooterItems
-            headers="Company"
-            firstItem="About"
-            secondItem="Blog"
-            thirdItem={
-              <div className="flex items-center gap-[10.16px] ">
-                <p>Careers</p>{" "}
-                <Button
-                  children="New"
-                  className="text-primary-color rounded-full"
-                  variant={"login"}
-                />
-              </div>
-            }
-            fourthItem={"Press Kit"}
-          />
+          <div className="max-md:hidden">
+            <FooterItems
+              headers="Company"
+              firstItem="About"
+              secondItem="Blog"
+              thirdItem={
+                <div className="flex items-center gap-[10.16px] ">
+                  <p>Careers</p>{" "}
+                  <Button
+                    children="New"
+                    className="text-primary-color rounded-full"
+                    variant={"login"}
+                  />
+                </div>
+              }
+              fourthItem={"Press Kit"}
+            />
+          </div>
 
           <FooterItems
             headers="Social Media"
@@ -93,13 +97,15 @@ export default function MainFooter() {
             fourthItem={null}
           />
 
-          <FooterItems
-            headers="Resources"
-            firstItem="Tutorials"
-            secondItem="Blog"
-            thirdItem="Community"
-            fourthItem={"Privacy Policy"}
-          />
+          <div className="max-md:hidden">
+            <FooterItems
+              headers="Resources"
+              firstItem="Tutorials"
+              secondItem="Blog"
+              thirdItem="Community"
+              fourthItem={"Privacy Policy"}
+            />
+          </div>
         </div>
       </div>
 
