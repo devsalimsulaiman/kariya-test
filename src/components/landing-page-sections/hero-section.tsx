@@ -5,7 +5,7 @@ export default function HeroSection() {
     <div className="w-full px-[100px]    max-md:px-[20px]">
       <div className="flex  h-auto md:max-lg:h-screen max-md:h-auto justify-between items-center gap-[10px]  md:max-lg:flex-col max-md:flex-col ">
         <div className="w-[50%]  flex flex-col gap-[35px] max-lg:w-full max-lg:items-center max-lg:text-center">
-          <h1 className="font-[800] text-[72.18px] text-[#000000] max-md:text-[60.66px] max-md:font-[600]  leading-none max-md:leading-tight">
+          <h1 className="font-[800] text-[72.18px] text-[#000000] max-md:text-[60.66px] max-md:font-[600]  leading-none max-md:leading-none">
             Secure Payments{" "}
             <span className="text-primary-color"> Made Simple</span>
           </h1>

@@ -62,13 +62,11 @@ export default function MainFooter() {
             </p>
           </div>
         </div>
-        <div className="flex items-start max-md:gap-[30px] gap-[82.55px] max-md:flex-col max-md:items-center">
+        <div className="flex items-start max-md:gap-[5px] gap-[82.55px]  max-md:justify-between max-md:items-center">
           <FooterItems
             headers="Product"
             firstItem="How It Works"
             secondItem="Pricing"
-            thirdItem="Security"
-            fourthItem={"API Documentation"}
           />
           <div className="max-md:hidden">
             <FooterItems
@@ -119,11 +117,11 @@ export default function MainFooter() {
 }
 
 type ListItem = {
-  headers: string;
-  firstItem: string;
-  secondItem: string;
-  thirdItem: React.ReactNode;
-  fourthItem: string | null;
+  headers?: string;
+  firstItem?: string;
+  secondItem?: string;
+  thirdItem?: React.ReactNode;
+  fourthItem?: string | null;
 };
 
 const FooterItems = ({
@@ -134,20 +132,20 @@ const FooterItems = ({
   fourthItem,
 }: ListItem) => {
   return (
-    <div className="flex flex-col gap-[30.48px] max-md:items-center">
-      <p className="font-[700] text-[20.32px] text-white md:max-lg:text-[11.63px]">
+    <div className="flex flex-col gap-[30.48px] max-md:items-center max-md:gap-[10px]">
+      <p className="font-[700] text-[20.32px] max-md:text-[20px] text-white md:max-lg:text-[11.63px]">
         {headers}
       </p>
-      <p className="font-[400] text-[20.32px] text-white md:max-lg:text-[11.63px]">
+      <p className="font-[400] text-[20.32px] max-md:text-[20px] text-white md:max-lg:text-[11.63px]">
         {firstItem}
       </p>
-      <p className="font-[400] text-[20.32px] text-white md:max-lg:text-[11.63px]">
+      <p className="font-[400] text-[20.32px] max-md:text-[20px] text-white md:max-lg:text-[11.63px]">
         {secondItem}
       </p>
-      <p className="font-[400] text-[20.32px] text-white md:max-lg:text-[11.63px]">
+      <p className="font-[400] text-[20.32px] max-md:text-[20px] text-white md:max-lg:text-[11.63px]">
         {thirdItem}
       </p>
-      <p className="font-[400] text-[20.32px] text-white md:max-lg:text-[11.63px]">
+      <p className="font-[400] text-[20.32px] max-md:text-[20px] text-white md:max-lg:text-[11.63px]">
         {fourthItem}
       </p>
     </div>

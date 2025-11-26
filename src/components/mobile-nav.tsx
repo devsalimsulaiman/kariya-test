@@ -22,19 +22,19 @@ export default function MobileNav() {
   const location = useLocation();
 
   return (
-    <div className="min-lg:hidden py-[10px] px-[40px] flex justify-between items-center min-lg:hidden">
+    <div className="min-lg:hidden py-[10px] px-[40px] max-md:px-[20px] flex justify-between items-center min-lg:hidden">
       <Link to="/">
         <img
           src="/icons/KariyaPay-logo.svg"
           alt="KariyaPay logo"
-          className="w-[96px] h-[89px]"
+          className="w-[96px] h-[89px] max-md:w-[60px]"
         />
       </Link>
 
       {!openSidebar && (
         <FaBars
           onClick={() => setOpenSidebar(true)}
-          className="w-[51px] h-[51px] cursor-pointer"
+          className="w-[51px] h-[51px] cursor-pointer max-md:w-[24px] max-md:h-[24px]"
         />
       )}
 
