@@ -10,9 +10,10 @@ export default function Navbar() {
           width={249}
           height={73}
           alt="kariyapay-logo"
+          className="max-md:w-[100px]"
         />
 
-        <div className="flex items-center gap-[41px]">
+        <div className="flex items-center gap-[41px] max-md:hidden">
           <span className="font-[400] text-[16px] text-primary-color">
             Home
           </span>
@@ -33,7 +34,7 @@ export default function Navbar() {
             children="Login"
             variant={"navBtn"}
             size={"navBtn"}
-            className="bg-white text-primary-color"
+            className="bg-white text-primary-color border border-primary-color"
           />
         </div>
       </div>
