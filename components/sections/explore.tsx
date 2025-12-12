@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Explore() {
   return (
-    <div className="border bg-white py-[100px] space-y-[100px] max-md:px-[20px]">
+    <div className=" bg-white py-[90px] space-y-[100px] max-md:px-[20px]">
       <div className="space-y-[20px]">
         <p className="font-[600] text-[48px] text-black text-center max-md:text-[20px]">
           Explore Kariyapay’s Features

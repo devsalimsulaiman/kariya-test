@@ -4,10 +4,10 @@ import { Button } from "../ui/button";
 export default function Navbar() {
   return (
     <div>
-      <div className="bg-white flex justify-between items-center w-full h-[120px] px-[20px]">
+      <div className="bg-white flex justify-between items-center w-full h-[100px] px-[40px]">
         <Image
           src={"/icons/kariya-logo.svg"}
-          width={249}
+          width={150}
           height={73}
           alt="kariyapay-logo"
           className="max-md:w-[100px]"

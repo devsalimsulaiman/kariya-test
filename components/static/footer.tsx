@@ -6,10 +6,10 @@ export default function Footer() {
   const year = date.getFullYear();
   return (
     <div className="px-[80px] py-[100px] bg-[#141415] max-md:px-[20px]">
-      <div className="flex justify-between items-start border-t pt-[50px] max-md:flex-col max-md:gap-[30px] max-md:items-center">
+      <div className="flex justify-between items-start border-t pt-[50px] max-md:flex-col max-md:gap-[30px] max-md:items-start">
         <Image
           src={"/icons/kariya-logo.svg"}
-          width={249}
+          width={150}
           height={73}
           alt="kariyapay-logo"
         />
