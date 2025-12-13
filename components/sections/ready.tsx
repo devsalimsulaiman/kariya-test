@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function Ready() {
   return (
-    <div className="py-[100px] px-[76px] bg-gradient-to-b from-[#4FCF00E5] to-[#151022] space-y-[30px] max-md:px-[20px]">
+    <div className="pt-[50px] pb-[90px] px-[76px] bg-gradient-to-b from-[#4FCF00E5] to-[#151022] space-y-[30px] max-md:px-[20px]">
       <p className="font-[600] text-white text-[64px] text-center max-md:text-[30px]">
         Ready To Get Started Now?
       </p>

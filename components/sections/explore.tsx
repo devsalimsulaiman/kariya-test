@@ -4,11 +4,11 @@ export default function Explore() {
   return (
     <div className=" bg-white py-[90px] space-y-[100px] max-md:px-[20px]">
       <div className="space-y-[20px]">
-        <p className="font-[600] text-[48px] text-black text-center max-md:text-[20px]">
+        <p className="font-[600] text-[48px] text-black text-center ">
           Explore Kariyapay’s Features
         </p>
 
-        <p className="font-[400] text-[18px]  text-black text-center max-md:text-[12px]">
+        <p className="font-[400] text-[18px]  text-black text-center ">
           KariyaPay is a smart payment wallet for easy transfers, secure escrow
           payments, <br className="max-md:hidden" /> and safe online
           transactions, built for buyers, sellers,{" "}

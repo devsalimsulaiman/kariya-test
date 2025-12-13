@@ -4,13 +4,13 @@ import { Button } from "../ui/button";
 export default function Navbar() {
   return (
     <div>
-      <div className="bg-white flex justify-between items-center w-full h-[100px] px-[40px]">
+      <div className="bg-white flex justify-between items-center w-full h-[100px] px-[40px] max-md:px-[20px]">
         <Image
           src={"/icons/kariya-logo.svg"}
-          width={150}
+          width={250}
           height={73}
           alt="kariyapay-logo"
-          className="max-md:w-[100px]"
+          className="max-md:w-[120px]"
         />
 
         <div className="flex items-center gap-[41px] max-md:hidden">

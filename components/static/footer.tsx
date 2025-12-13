@@ -5,32 +5,37 @@ export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className="px-[80px] py-[100px] bg-[#141415] max-md:px-[20px]">
-      <div className="flex justify-between items-start border-t pt-[50px] max-md:flex-col max-md:gap-[30px] max-md:items-start">
+    <div className="px-[80px] py-[100px] max-md:py-[50px] bg-[#141415] max-md:px-[20px] space-y-[50px]">
+      <div className="flex justify-between gap-[100px] items-start border-t pt-[50px] max-md:flex-col max-md:gap-[20px] max-md:items-start ">
         <Image
           src={"/icons/kariya-logo.svg"}
           width={150}
           height={73}
           alt="kariyapay-logo"
+          className="max-md:mb-[20px]"
         />
 
-        <FooterLinks
-          link1="Home"
-          link2="About Us"
-          link3="Services"
-          link4="Products"
-          link5="Contact Us"
-        />
+        <div className="border w-full flex justify-between max-md:flex-wrap gap-[50px]">
+          <div>
+            <FooterLinks
+              link1="Home"
+              link2="About Us"
+              link3="Services"
+              link4="Products"
+              link5="Contact Us"
+            />
+          </div>
 
-        <FooterLinks link1="Linkedin" link2="Twitter" />
+          <FooterLinks link1="Linkedin" link2="Twitter" />
 
-        <FooterLinks
-          link1="Terms and Conditions"
-          link2={<span>Copyright © {year} </span>}
-        />
+          <FooterLinks
+            link1="Terms and Conditions"
+            link2={<span>Copyright © {year} </span>}
+          />
+        </div>
       </div>
 
-      <div className="py-[40px] space-y-[20px]">
+      <div className=" space-y-[20px]">
         <div className="flex gap-[32px]">
           <p className="font-[400] text-[14px] text-[#BDBDBD]">Terms of Use</p>
           <p className="font-[400] text-[14px] text-[#BDBDBD]">
@@ -43,13 +48,13 @@ export default function Footer() {
           Copyright © {year} Transparent. All rights reserved.
         </p>
 
-        <p className="font-[400] text-[11px] text-[#BDBDBD]">
+        {/* <p className="font-[400] text-[11px] text-[#BDBDBD]">
           This product focuses on providing organizations with tools to achieve
           financial transparency. It might include features for budgeting,
           expense tracking, financial reporting, and analytics to help
           businesses understand and <br /> communicate their financial health
           clearly.
-        </p>
+        </p> */}
       </div>
     </div>
   );

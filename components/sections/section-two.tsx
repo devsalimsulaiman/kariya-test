@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SectionTwo() {
   return (
-    <div className="bg-white space-y-[30px] max-md:pt-[100px] max-md:px-[20px] py-[180px] ">
+    <div className="bg-white space-y-[30px] max-md:pt-[50px] max-md:px-[20px] pt-[180px] ">
       <div className="space-y-[20px] text-center">
         <p className="font-[600] text-[48px] text-[#000000]">What we Offer</p>
         <p className="font-[400] text-[16px] text-[#000000] leading-[28px]">
