@@ -15,7 +15,7 @@ export default function Footer() {
           className="max-md:mb-[20px]"
         />
 
-        <div className="border w-full flex justify-between max-md:flex-wrap gap-[50px]">
+        <div className=" w-full flex justify-between max-md:flex-wrap gap-[50px]">
           <div>
             <FooterLinks
               link1="Home"

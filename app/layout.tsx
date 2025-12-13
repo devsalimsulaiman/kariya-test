@@ -10,6 +10,9 @@ const bricolageGrotesque = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.png",
+  },
   title: "Kariyapay",
   description: "Kariyapay",
 };
