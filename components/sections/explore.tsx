@@ -9,7 +9,17 @@ type CardProps = {
 const Card = ({ img, title, paragraph }: CardProps) => {
   return (
     <div className="bg-white rounded-[24px] p-[28px] flex gap-[20px] shadow-2xl max-md:flex-col max-md:items-center">
-      <Image src={img} width={48} height={48} alt={title} />
+      
+      {/* Icon wrapper */}
+      <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0">
+        <Image
+          src={img}
+          alt={title}
+          width={48}
+          height={48}
+          className="object-contain"
+        />
+      </div>
 
       <div className="space-y-[6px] max-md:text-center">
         <p className="font-[700] text-[22px] text-primary-color">
@@ -22,6 +32,7 @@ const Card = ({ img, title, paragraph }: CardProps) => {
     </div>
   );
 };
+
 
 const features = [
   {
