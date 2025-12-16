@@ -15,9 +15,9 @@ export default function SectionTwo() {
       </div>
 
       <div className="flex justify-center gap-[30px] flex-wrap">
-        <Image src={"/icons/offer1.svg"} height={386} width={300} alt="card1" />
-        <Image src={"/icons/offer2.svg"} height={386} width={300} alt="card1" />
-        <Image src={"/icons/offer3.jpg"} height={386} width={300} alt="card1" />
+        <Image src={"/icons/offer1.svg"} height={386} width={300} alt="offer 1" />
+        <Image src={"/icons/offer2.svg"} height={386} width={300} alt="offer 2" />
+        <Image src={"/icons/offer3.svg"} height={386} width={300} alt="offer 3" />
       </div>
     </div>
   );
