@@ -41,7 +41,8 @@ export default function Explore() {
           width={49}
           height={57}
           title="Payment Links for Easy Collections"
-          paragraph="Buy and sell with confidence. Moneystays  protected until delivery is confirmed."
+          paragraph="Get paid by anyone, even if they don’t use KariyaPay. Just share your link and watch payments roll in.
+"
         />
       </div>
     </div>
