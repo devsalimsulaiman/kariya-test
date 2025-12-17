@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
   const links = [
     { name: "Home", href: "/" },
     { name: "Pricing", href: "/pricing" },
@@ -18,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <div className="bg-white flex justify-between items-center w-full h-[100px] px-[40px] max-md:px-[20px] shadow-md">
+      <header className="bg-white flex justify-between items-center w-full h-[100px] landscape:h-[72px] px-[40px] max-md:px-[20px] shadow-md">
         
         {/* Logo */}
         <Image
@@ -27,14 +28,17 @@ export default function Navbar() {
           width={250}
           height={73}
           className="
-            h-auto w-[160px] sm:w-[220px] md:w-[230px] lg:w-[250px] landscape:w-[140px]
+            h-auto 
+            w-[160px] 
+            sm:w-[220px] 
+            md:w-[230px] 
+            lg:w-[250px] 
+            landscape:w-[140px]
           "
-        /> 
-
-
+        />
 
         {/* Desktop Links */}
-        <div className="flex items-center gap-[41px] max-md:hidden">
+        <nav className="flex items-center gap-[41px] max-md:hidden landscape:hidden">
           {links.map((link) => (
             <Link
               key={link.name}
@@ -44,34 +48,38 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-        </div>
+        </nav>
 
         {/* Desktop Buttons */}
-        <div className="flex gap-[10px] max-md:hidden">
-          <Button children="Register" variant="navBtn" size="navBtn" />
+        <div className="flex gap-[10px] max-md:hidden landscape:hidden">
+          <Button variant="navBtn" size="navBtn">
+            Register
+          </Button>
           <Button
-            children="Login"
             variant="navBtn"
             size="navBtn"
             className="bg-white text-primary-color border border-primary-color"
-          />
+          >
+            Login
+          </Button>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile / Landscape Hamburger */}
         <button
-          className="flex flex-col gap-1 md:hidden"
+          className="flex flex-col gap-1 md:hidden landscape:flex"
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
         >
-          <span className="block w-6 h-[2px] bg-black"></span>
-          <span className="block w-6 h-[2px] bg-black"></span>
-          <span className="block w-6 h-[2px] bg-black"></span>
+          <span className="block w-6 h-[2px] bg-black" />
+          <span className="block w-6 h-[2px] bg-black" />
+          <span className="block w-6 h-[2px] bg-black" />
         </button>
-      </div>
+      </header>
 
       {/* Side Drawer */}
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={setIsOpen}>
+          
           {/* Overlay */}
           <Transition.Child
             as={Fragment}
@@ -85,8 +93,8 @@ export default function Navbar() {
             <div className="fixed inset-0 bg-black" />
           </Transition.Child>
 
-          {/* Drawer Panel */}
-          <div className="fixed inset-0 flex z-50">
+          {/* Drawer */}
+          <div className="fixed inset-0 flex">
             <Transition.Child
               as={Fragment}
               enter="transform transition duration-300 ease-in-out"
@@ -96,7 +104,9 @@ export default function Navbar() {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative bg-white w-72 max-w-full h-full p-6 flex flex-col justify-start gap-6 shadow-xl">
+              <Dialog.Panel className="relative bg-white w-72 max-w-full h-full p-6 flex flex-col gap-6 shadow-xl">
+                
+                {/* Close */}
                 <button
                   className="self-end text-black text-3xl font-bold"
                   onClick={() => setIsOpen(false)}
@@ -105,39 +115,42 @@ export default function Navbar() {
                   &times;
                 </button>
 
-                {/* Menu Links */}
+                {/* Links */}
                 <nav className="flex flex-col gap-4 mt-4">
                   {links.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="font-[500] text-[18px] text-primary-color hover:underline mb-4"
+                      className="font-[500] text-[18px] text-primary-color hover:underline"
                     >
                       {link.name}
                     </Link>
                   ))}
                 </nav>
 
-                {/* Buttons at bottom */}
+                {/* Buttons */}
                 <div className="mt-auto flex flex-col gap-4">
                   <Button
-                    children="Register"
                     variant="navBtn"
                     size="navBtn"
-                    className="w-full sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
-                  />
+                    className="w-full h-[44px] sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
+                  >
+                    Register
+                  </Button>
                   <Button
-                    children="Login"
                     variant="navBtn"
                     size="navBtn"
-                    className="bg-white text-primary-color border border-primary-color w-full sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
-                  />
+                    className="bg-white text-primary-color border border-primary-color w-full h-[44px] sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
+                  >
+                    Login
+                  </Button>
                 </div>
+
               </Dialog.Panel>
             </Transition.Child>
 
-            {/* Empty div to allow clicking outside to close */}
+            {/* Click outside */}
             <div className="flex-shrink-0 w-0" aria-hidden="true" />
           </div>
         </Dialog>
