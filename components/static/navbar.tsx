@@ -20,10 +20,13 @@ export default function Navbar() {
       {/* Navbar */}
       <div className="bg-white flex justify-between items-center w-full h-[100px] px-[40px] max-md:px-[20px] shadow-md">
         <Image
-          src={"/icons/kariya-logo.svg"}
-          alt="kariyapay-logo"
-          className="w-[200px] sm:w-[140px] md:w-[180px] h-auto"
-        />
+  src="/icons/kariya-logo.svg"
+  alt="kariyapay-logo"
+  width={250}
+  height={73}
+  className="h-auto w-[120px] sm:w-[140px] md:w-[180px] lg:w-[250px]" 
+/>
+
 
         {/* Desktop Links */}
         <div className="flex items-center gap-[41px] max-md:hidden">
