@@ -8,7 +8,6 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const links = [
     { name: "Home", href: "/" },
     { name: "Pricing", href: "/pricing" },
@@ -19,11 +18,8 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <header className="bg-white flex justify-between items-center w-full
-        h-[80px] sm:h-[90px] md:h-[100px]
-        px-[20px] sm:px-[30px] md:px-[40px]
-        shadow-md">
-
+      <div className="bg-white flex justify-between items-center w-full h-[100px] px-[40px] max-md:px-[20px] shadow-md">
+        
         {/* Logo */}
         <Image
           src="/icons/kariya-logo.svg"
@@ -31,14 +27,14 @@ export default function Navbar() {
           width={250}
           height={73}
           className="
-            h-auto
-            w-[140px] sm:w-[160px] md:w-[200px] lg:w-[250px]
-            landscape:w-[140px]
+            h-auto w-[160px] sm:w-[220px] md:w-[230px] lg:w-[250px] landscape:w-[140px]
           "
-        />
+        /> 
+
+
 
         {/* Desktop Links */}
-        <nav className="hidden md:flex items-center gap-[41px]">
+        <div className="flex items-center gap-[41px] max-md:hidden">
           {links.map((link) => (
             <Link
               key={link.name}
@@ -48,117 +44,101 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-        </nav>
+        </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex gap-[10px]">
-          <Button variant="navBtn" size="navBtn">Register</Button>
+        <div className="flex gap-[10px] max-md:hidden">
+          <Button children="Register" variant="navBtn" size="navBtn" />
           <Button
+            children="Login"
             variant="navBtn"
             size="navBtn"
             className="bg-white text-primary-color border border-primary-color"
-          >
-            Login
-          </Button>
+          />
         </div>
 
-        {/* Hamburger */}
+        {/* Mobile Hamburger */}
         <button
+          className="flex flex-col gap-1 md:hidden"
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
-          className="relative w-8 h-6 md:hidden"
         >
-          <span
-            className={`absolute h-[2px] w-full bg-black transition-all duration-300
-              ${isOpen ? "rotate-45 top-3" : "top-0"}
-            `}
-          />
-          <span
-            className={`absolute h-[2px] w-full bg-black transition-all duration-300
-              ${isOpen ? "opacity-0" : "top-3"}
-            `}
-          />
-          <span
-            className={`absolute h-[2px] w-full bg-black transition-all duration-300
-              ${isOpen ? "-rotate-45 top-3" : "top-6"}
-            `}
-          />
+          <span className="block w-6 h-[2px] bg-black"></span>
+          <span className="block w-6 h-[2px] bg-black"></span>
+          <span className="block w-6 h-[2px] bg-black"></span>
         </button>
-      </header>
+      </div>
 
       {/* Side Drawer */}
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={setIsOpen}>
-
           {/* Overlay */}
           <Transition.Child
             as={Fragment}
             enter="transition-opacity duration-300"
             enterFrom="opacity-0"
-            enterTo="opacity-100"
+            enterTo="opacity-50"
             leave="transition-opacity duration-300"
-            leaveFrom="opacity-100"
+            leaveFrom="opacity-50"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/50 backdrop-blur-[2px]" />
+            <div className="fixed inset-0 bg-black" />
           </Transition.Child>
 
-          <div className="fixed inset-0 flex">
+          {/* Drawer Panel */}
+          <div className="fixed inset-0 flex z-50">
             <Transition.Child
               as={Fragment}
-              enter="transform transition duration-300 ease-out"
+              enter="transform transition duration-300 ease-in-out"
               enterFrom="-translate-x-full"
               enterTo="translate-x-0"
-              leave="transform transition duration-300 ease-in"
+              leave="transform transition duration-300 ease-in-out"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="
-                bg-white w-72 max-w-full h-full
-                p-6 flex flex-col gap-6 shadow-xl
-              ">
-                {/* Close */}
+              <Dialog.Panel className="relative bg-white w-72 max-w-full h-full p-6 flex flex-col justify-start gap-6 shadow-xl">
                 <button
+                  className="self-end text-black text-3xl font-bold"
                   onClick={() => setIsOpen(false)}
                   aria-label="Close menu"
-                  className="self-end text-3xl font-bold"
                 >
                   &times;
                 </button>
 
-                {/* Links */}
-                <nav className="flex flex-col gap-5 mt-6">
+                {/* Menu Links */}
+                <nav className="flex flex-col gap-4 mt-4">
                   {links.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-[18px] font-[500] text-primary-color hover:underline"
+                      className="font-[500] text-[18px] text-primary-color hover:underline mb-4"
                     >
                       {link.name}
                     </Link>
                   ))}
                 </nav>
 
-                {/* Buttons */}
+                {/* Buttons at bottom */}
                 <div className="mt-auto flex flex-col gap-4">
                   <Button
+                    children="Register"
                     variant="navBtn"
                     size="navBtn"
-                    className="w-full h-[48px] text-base"
-                  >
-                    Register
-                  </Button>
+                    className="w-full sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
+                  />
                   <Button
+                    children="Login"
                     variant="navBtn"
                     size="navBtn"
-                    className="w-full h-[48px] bg-white text-primary-color border border-primary-color text-base"
-                  >
-                    Login
-                  </Button>
+                    className="bg-white text-primary-color border border-primary-color w-full sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
+                  />
                 </div>
               </Dialog.Panel>
             </Transition.Child>
+
+            {/* Empty div to allow clicking outside to close */}
+            <div className="flex-shrink-0 w-0" aria-hidden="true" />
           </div>
         </Dialog>
       </Transition.Root>
