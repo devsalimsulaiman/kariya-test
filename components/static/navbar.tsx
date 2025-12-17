@@ -24,7 +24,7 @@ export default function Navbar() {
   alt="kariyapay-logo"
   width={250}
   height={73}
-  className="h-auto w-[120px] sm:w-[140px] md:w-[180px] lg:w-[250px]" 
+  className="h-auto w-[120px] sm:w-[180px] md:w-[180px] lg:w-[250px]" 
 />
 
 
