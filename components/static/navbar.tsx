@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <header className="bg-white flex justify-between items-center w-full h-[100px] landscape:h-[72px] px-[40px] max-md:px-[20px] shadow-md">
+      <header className="bg-white flex justify-between items-center w-full h-[100px] px-[40px] max-md:px-[20px] shadow-md">
         
         {/* Logo */}
         <Image
@@ -28,17 +28,17 @@ export default function Navbar() {
           width={250}
           height={73}
           className="
-            h-auto 
-            w-[160px] 
-            sm:w-[220px] 
-            md:w-[230px] 
-            lg:w-[250px] 
-            landscape:w-[140px]
+            h-auto
+            w-[160px]
+            sm:w-[220px]
+            md:w-[230px]
+            lg:w-[250px]
+            max-md:landscape:w-[140px]
           "
         />
 
-        {/* Desktop Links */}
-        <nav className="flex items-center gap-[41px] max-md:hidden landscape:hidden">
+        {/* Desktop Links (ONLY md+) */}
+        <nav className="hidden md:flex items-center gap-[41px]">
           {links.map((link) => (
             <Link
               key={link.name}
@@ -50,8 +50,8 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop Buttons */}
-        <div className="flex gap-[10px] max-md:hidden landscape:hidden">
+        {/* Desktop Buttons (ONLY md+) */}
+        <div className="hidden md:flex gap-[10px]">
           <Button variant="navBtn" size="navBtn">
             Register
           </Button>
@@ -64,9 +64,9 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile / Landscape Hamburger */}
+        {/* Mobile + Mobile Landscape Hamburger */}
         <button
-          className="flex flex-col gap-1 md:hidden landscape:flex"
+          className="flex flex-col gap-1 md:hidden"
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
         >
@@ -104,7 +104,7 @@ export default function Navbar() {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative bg-white w-72 max-w-full h-full p-6 flex flex-col gap-6 shadow-xl">
+              <Dialog.Panel className="relative bg-white w-72 h-full p-6 flex flex-col gap-6 shadow-xl">
                 
                 {/* Close */}
                 <button
@@ -116,7 +116,7 @@ export default function Navbar() {
                 </button>
 
                 {/* Links */}
-                <nav className="flex flex-col gap-4 mt-4">
+                <nav className="flex flex-col gap-5 mt-4">
                   {links.map((link) => (
                     <Link
                       key={link.name}
@@ -131,17 +131,11 @@ export default function Navbar() {
 
                 {/* Buttons */}
                 <div className="mt-auto flex flex-col gap-4">
-                  <Button
-                    variant="navBtn"
-                    size="navBtn"
-                    className="w-full h-[44px] sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
-                  >
+                  <Button className="w-full h-[44px] sm:h-[48px] text-base">
                     Register
                   </Button>
                   <Button
-                    variant="navBtn"
-                    size="navBtn"
-                    className="bg-white text-primary-color border border-primary-color w-full h-[44px] sm:h-[48px] md:h-[52px] text-sm sm:text-base md:text-lg"
+                    className="w-full h-[44px] sm:h-[48px] text-base bg-white text-primary-color border border-primary-color"
                   >
                     Login
                   </Button>
@@ -149,9 +143,6 @@ export default function Navbar() {
 
               </Dialog.Panel>
             </Transition.Child>
-
-            {/* Click outside */}
-            <div className="flex-shrink-0 w-0" aria-hidden="true" />
           </div>
         </Dialog>
       </Transition.Root>
