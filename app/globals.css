@@ -123,9 +123,6 @@ html,
 body {
   font-family: var(--font-sans);
 }
-button {
-  cursor: pointer;
-}
 
 @layer base {
   * {
@@ -144,3 +141,14 @@ button {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* buttons with hover effects */
+button {
+  cursor: pointer;
+  @apply transition-transform transition-opacity duration-200 ease-in-out;
+}
+
+button:hover {
+  @apply opacity-80 scale-105;
+}
+
