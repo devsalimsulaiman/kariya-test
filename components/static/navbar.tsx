@@ -22,7 +22,7 @@ export default function Navbar() {
         <Image
           src={"/icons/kariya-logo.svg"}
           alt="kariyapay-logo"
-          className="w-[200px] sm:w-[180px] md:w-[250px] h-auto"
+          className="w-[200px] sm:w-[140px] md:w-[180px] h-auto"
         />
 
         {/* Desktop Links */}
