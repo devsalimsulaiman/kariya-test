@@ -30,7 +30,7 @@ const buttonVariants = cva(
         "icon-sm": "size-8",
         "icon-lg": "size-10",
         // navBtn: "h-[33px] rounded-[4px] py-[14px] px-[20px]",
-        navBtn: "h-[44px] px-6 text-sm sm:h-[48px] sm:px-8 sm:text-base md:h-[52px] md:px-10 md:text-lg rounded-md",
+        navBtn: "h-[44px] px-6 text-sm sm:h-[38px] sm:px-8 sm:text-base md:h-[47px] md:px-10 md:text-lg rounded-md",
         bodyBtn: "h-[54px] rounded-[8px] px-[47px] py-[16px]",
       },
     },
