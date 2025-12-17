@@ -24,7 +24,7 @@ export default function Navbar() {
           width={250}
           height={73}
           alt="kariyapay-logo"
-          className="w-[200px] sm:w-[220px] md:w-[250px] h-auto"
+          className="w-[200px] sm:w-[180px] md:w-[250px] h-auto"
         />
 
         {/* Desktop Links */}
@@ -106,7 +106,7 @@ export default function Navbar() {
                       key={link.name}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="font-[500] text-[18px] text-primary-color hover:underline"
+                      className="font-[500] text-[18px] text-primary-color hover:underline mb-4"
                     >
                       {link.name}
                     </Link>
