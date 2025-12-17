@@ -21,8 +21,6 @@ export default function Navbar() {
       <div className="bg-white flex justify-between items-center w-full h-[100px] px-[40px] max-md:px-[20px] shadow-md">
         <Image
           src={"/icons/kariya-logo.svg"}
-          width={250}
-          height={73}
           alt="kariyapay-logo"
           className="w-[200px] sm:w-[180px] md:w-[250px] h-auto"
         />
