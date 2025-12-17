@@ -4,10 +4,16 @@ import { useState, Fragment } from "react";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const links = ["Home", "Pricing", "Faqs", "Contact"];
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Faqs", href: "/faqs" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <>
@@ -18,15 +24,19 @@ export default function Navbar() {
           width={250}
           height={73}
           alt="kariyapay-logo"
-          className="max-md:w-[120px]"
+          className="w-[200px] sm:w-[220px] md:w-[250px] h-auto"
         />
 
         {/* Desktop Links */}
         <div className="flex items-center gap-[41px] max-md:hidden">
           {links.map((link) => (
-            <span key={link} className="font-[400] text-[16px] text-primary-color">
-              {link}
-            </span>
+            <Link
+              key={link.name}
+              href={link.href}
+              className="font-[400] text-[16px] text-primary-color hover:underline"
+            >
+              {link.name}
+            </Link>
           ))}
         </div>
 
@@ -61,9 +71,9 @@ export default function Navbar() {
             as={Fragment}
             enter="transition-opacity duration-300"
             enterFrom="opacity-0"
-            enterTo="opacity-50"
+            enterTo="opacity-30"
             leave="transition-opacity duration-300"
-            leaveFrom="opacity-50"
+            leaveFrom="opacity-30"
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 bg-black" />
@@ -92,9 +102,14 @@ export default function Navbar() {
                 {/* Menu Links */}
                 <nav className="flex flex-col gap-4 mt-4">
                   {links.map((link) => (
-                    <span key={link} className="font-[500] text-[18px] text-primary-color">
-                      {link}
-                    </span>
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="font-[500] text-[18px] text-primary-color hover:underline"
+                    >
+                      {link.name}
+                    </Link>
                   ))}
                 </nav>
 
